@@ -68,3 +68,4 @@ If the script gives an error , just add an extra argument:
 ``` _,contours,hierarchy=cv2.findContours()```
 - The spawn location of the UAV has been changed slightly, (within 5 meters of the UGV), to aid in takeoff.
 - The range of the depth camera has been increased, but the FOV has not been changed (in accordance with the rules).
+- Some paths/URIs in the .launch and the .world files may need to be changed according to one's own directory structure.
