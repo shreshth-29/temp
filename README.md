@@ -60,3 +60,11 @@ cd ~/ardupilot/ArduCopter/ && sim_vehicle.py -v ArduCopter -f gazebo-iris --cons
 rosrun interiit22 ugv_nav.py 
 rosrun interiit22 drone_nav.py
 ```
+
+# NOTE: #
+
+- The line ```contours,hierarchy=cv2.findContours()``` may give an error: _too many values to unpack_, because the function ```cv2.findContours()``` returns 2 or 3 values depending on the python version. 
+If the script gives an error , just add an extra argument:
+``` _,contours,hierarchy=cv2.findContours()```
+- The spawn location of the UAV has been changed slightly, (within 5 meters of the UGV), to aid in takeoff.
+- The range of the depth camera has been increased, but the FOV has not been changed (in accordance with the rules).
